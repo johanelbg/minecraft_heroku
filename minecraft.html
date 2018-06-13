@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Minecraft</title>
+    <!--Bootsrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!--Local CSS-->
+    <link rel="stylesheet" href="./CSS/minecraft.css">
+
+  </head>
+
+  <body>
+
+      <div class="loading">
+        <div class="loader">
+        </div>
+      </div>
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="myModal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content StartModalStyle">
+              <h5 class="modal-title" id="exampleModalLongTitle">Welcome to Minecraft 2D</h5>
+            <div class="modal-body">
+             <p>Welcome to a minecraft-like game in 2D</p>
+             <p>You are a minion !</p>
+             <p>Will you find your soulmate in this map ?</p>
+             <button type="button" class="buttonStart btn btn-primary btn-lg " id="startButton">Start a new Game!</button>
+             <button type="button" class="buttonStart btn btn-primary btn-lg" id="instrucButton">Instructions</button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade instrucModal" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content instrucModalStyle">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <p>
+                    You are a minion who desperately wants to get married. The tile your soulmate is hidding in is red-bordered. Your goal is to get to her! To do so, you have to move your minion to the tile which is next to hers. Once you've found her, click on her to marry her ! Your minion can move horizontaly, and can jump on stone tiles. You have many tools to help you! An axe to harvest wood and leafs, a pickaxe to mine stone, and a shovel to dig ground and grass. But if you fell from too high, you will die :(... Build the world to find your way to the one you love !!
+                  </p>
+                  <p>
+                    A cloud is standing in your way ? No problem, Bob Marley will smoke it !
+                  </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="gotItButton">Got It !</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="finalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content modalFinal">
+            <div class="modal-body">
+            <h1>Congrats you've just married Sanda !</h1>
+            <button type="button" class="btn btn-primary btn-lg resetButton">Relaunch</button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="container-fluid" id="isLostBigBox">
+          <div class="container" id = "defeatContainer">
+            <p id='defeatText'>You fell from too high. You are a minion dude, not Bob Marley...</p>
+            <button type="button" class="btn-danger" onclick="resetAfterDefeat();">I'll get my princess!</button>
+          </div>
+        </div>
+
+      <div class="sideBar" id="sideBar">
+          <div class="toolContainer" id="toolContainer0"></div>
+          <div class="toolContainer" id="toolContainer1"></div>
+          <div class="toolContainer" id="toolContainer2"></div>
+          <div class="toolContainer" id="toolContainer3"></div>
+
+
+          <div class="buttons">
+            <button type='button' id="toTheTopLeft"></button>
+            <button type='button' id="toTheTopRight"></button>
+          </div>
+          <div class="buttons">
+            <button type='button' id="toTheLeft"></button>
+            <button type='button' id="toTheRight"></button>
+          </div>
+          <div class="buttons">
+            <button type='button' id="toTheBottomLeft"></button>
+            <button type='button' id="toTheBottomRight"></button>
+          </div>
+
+          <div class="lastTile" id="tileCreator"></div>
+
+          <div class="reset_mute">
+            <button type="button" class="resetButton">Reset</button>
+          </div>
+      </div>
+    <div id="tutorialBox" class="tutoBox"></div>
+    <div id="bigBox"></div>
+
+
+    <!--Boostrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!--Peronnal JS-->
+    <script type="text/javascript" src="./JS/minecraft.js"></script>
+  </body>
+</html>
