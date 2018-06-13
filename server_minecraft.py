@@ -5,7 +5,6 @@ import bottle as b
 from bottle import route, run, get
 
 
-
 @route('/')
 def index():
     return b.template('minecraft.html')
@@ -13,12 +12,12 @@ def index():
 
 @get('/JS/<filename:re:.*\.js>')
 def javascript(filename):
-    return b.static_file(filename, root='js')
+    return b.static_file(filename, root='JS')
 
 
 @get('/CSS/<filename:re:.*\.css>')
 def stylesheets(filename):
-    return b.static_file(filename, root='css')
+    return b.static_file(filename, root='CSS')
 
 
 @get('/sounds/<filename:re:.*\.(mp3)>')
